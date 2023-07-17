@@ -218,8 +218,10 @@ function load() {
 	if(modInfo.otherLanguageMod===false){
 		if(modInfo.languageMod==true){
 			options.ch = false
+			language = "en_us";
 		}else{
 			options.ch = true
+			language = "zh_cn";
 		}
 	}else if(modInfo.otherLanguageMod===true && player.Language.sure===false){
 		options.ch = undefined

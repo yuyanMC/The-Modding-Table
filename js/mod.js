@@ -100,15 +100,13 @@ function isEndgame() {
 function getPointsDisplay(){
 	let a = ''
 	if(player.devSpeed && player.devSpeed != 1){
-		a += options.ch ? '<br>时间加速: '+format(player.devSpeed)+'x' : '<br>Dev Speed: '+format(player.devSpeed)+'x'
+		a += localize("{tmt.devSpeed}",{devSpeed:player.devSpeed});
 	}
 	if(player.offTime !== undefined){
-		a += options.ch ? '<br>离线加速剩余时间: '+formatTime(player.offTime.remain) : '<br>Offline Time: '+formatTime(player.offTime.remain)
+		a += localize("{tmt.offTime}",{offTime:player.offTime.remain});
 	}
 	a += '<br>'
-	if(options.ch !== undefined){
-		a += `<span class="overlayThing">${(options.ch?"你有":"You have")} <h2  class="overlayThing" id="points"> ${format(player.points)}</h2> ${modInfo.pointsName}</span>`
-	}
+	a += localize("{tmt.points}",{points:format(player.points),pointsName:modInfo.pointsName});
 	a += tmp.displayThings
 	a += '<br><br>'
 	return a

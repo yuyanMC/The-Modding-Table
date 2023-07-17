@@ -19,7 +19,7 @@ addLayer("OtherTab small", {
     position: -1,
     row: 999,
     symbol() {
-        return options.ch ? '↓ 其他页面 ↓' : '↓ Other Tab ↓'
+        return localize("{tmt.otherTab.symbol}");
     },
     nodeStyle: {"font-size": "15px", "text-center": "center", "height": "30px"},
     startData() { return {
@@ -41,7 +41,7 @@ addLayer("Setting", {
     position: 0,
     row: 999,
     symbol() {
-        return options.ch ? '设置' : 'Setting'
+        return localize("{tmt.setting.symbol}");
     },
     startData() { return {
         unlocked: true,
@@ -61,7 +61,7 @@ addLayer("Information", {
     position: 2,
     row: 999,
     symbol() {
-        return options.ch ? '信息' : 'Information'
+        return localize("{tmt.information.symbol}");
     },
     startData() { return {
         unlocked: true,
@@ -81,7 +81,7 @@ addLayer("Changelog", {
     position: 3,
     row: 999,
     symbol() {
-        return options.ch ? '更新日志' : 'Changelog'
+        return localize("{tmt.changelog.symbol}");
     },
     startData() { return {
         unlocked: true,
